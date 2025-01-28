@@ -4,17 +4,11 @@ const FeedbackContext = createContext()
 
 
 export  const FeedbackProvider = ({children}) => {
-    // const [ feedbacks , setFeedbacks] = useState([
-    //     {
-    //     id:1 , rating: 5 , review:"good product"
-    //   }
-    // ])
     
     const [feedbacks , setFeedbacks] = useState([])
 
     const [edit , setEdit] = useState({feedback:{} , isEdit:false})
 
-    // const [edit , setEdit] = useState({feedback: {} , isEdit: false})
     
       const addFeedback = (newFeedback) =>{
         setFeedbacks([newFeedback ,...feedbacks])
